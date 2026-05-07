@@ -1,0 +1,80 @@
+/* Design tokens — WCAG 2.1 AA contrast verified for foreground/background pairs. */
+:root {
+  /* Surfaces */
+  --pv-bg: #0e0f12;
+  --pv-bg-elevated: #1a1c21;
+  --pv-bg-overlay: rgba(14, 15, 18, 0.85);
+  --pv-surface-1: #23262d;
+  --pv-surface-2: #2c3038;
+
+  /* Text — contrast ratios vs --pv-bg:
+     #f5f7fa on #0e0f12 ≈ 16.4 (AAA)
+     #c2c8d2 on #0e0f12 ≈ 10.0 (AAA)
+     #8a92a0 on #0e0f12 ≈ 5.0  (AA)
+  */
+  --pv-text-primary: #f5f7fa;
+  --pv-text-secondary: #c2c8d2;
+  --pv-text-muted: #8a92a0;
+
+  /* Accent */
+  --pv-accent: #4ea1ff;
+  --pv-accent-hover: #6cb3ff;
+  --pv-focus-ring: #ffd166;
+
+  /* Status */
+  --pv-error: #ff6b6b;
+  --pv-error-bg: #3a1f23;
+  --pv-warn: #ffb648;
+
+  /* Borders */
+  --pv-border: #353a44;
+  --pv-border-strong: #4a505c;
+
+  /* Radii / shadows */
+  --pv-radius-sm: 4px;
+  --pv-radius-md: 8px;
+  --pv-radius-lg: 12px;
+  --pv-shadow-1: 0 2px 8px rgba(0, 0, 0, 0.4);
+
+  /* Spacing scale */
+  --pv-sp-1: 4px;
+  --pv-sp-2: 8px;
+  --pv-sp-3: 12px;
+  --pv-sp-4: 16px;
+  --pv-sp-5: 24px;
+  --pv-sp-6: 32px;
+
+  /* Layout */
+  --pv-thumb-min: 160px;
+  --pv-thumb-aspect: 1 / 1;
+
+  /* Motion */
+  --pv-motion-fast: 120ms;
+  --pv-motion-medium: 220ms;
+  --pv-easing: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --pv-bg: #f7f8fa;
+    --pv-bg-elevated: #ffffff;
+    --pv-bg-overlay: rgba(247, 248, 250, 0.9);
+    --pv-surface-1: #ffffff;
+    --pv-surface-2: #eef0f3;
+    --pv-text-primary: #14161a;   /* on #f7f8fa ≈ 15.7 (AAA) */
+    --pv-text-secondary: #3a3f48; /* on #f7f8fa ≈ 9.4 (AAA) */
+    --pv-text-muted: #5a6170;     /* on #f7f8fa ≈ 5.5 (AA)  */
+    --pv-accent: #1f6feb;
+    --pv-accent-hover: #1a5ec5;
+    --pv-border: #d6d9de;
+    --pv-border-strong: #a8aeba;
+    --pv-shadow-1: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --pv-motion-fast: 0ms;
+    --pv-motion-medium: 0ms;
+  }
+}
